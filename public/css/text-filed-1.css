@@ -1,0 +1,258 @@
+*, *:after, *:before { -webkit-box-sizing: border-box; box-sizing: border-box; }
+.clearfix:before, .clearfix:after { content: ''; display: table; }
+.clearfix:after { clear: both; }
+
+.field-main {	font-size: 150%;padding: 0 0;}
+
+button, input, select, textarea {
+	font-family: inherit;
+	font-size: 100%;
+	margin: 0;
+}
+.input {
+	position: relative;
+	z-index: 1;
+	display: inline-block;
+	margin: 0em;
+	max-width: 100%;
+	width: calc(100% - 0em);
+	vertical-align: top;
+}
+.animated-field {
+	position: relative;
+	display: block;
+	float: right;
+	padding: 0.8em;
+	width: 60%;
+	border: none;
+	border-radius: 0;
+	background: #f0f0f0;
+	color: #aaa;
+	font-weight: normal;
+	
+	-webkit-appearance: none; 
+}
+
+.animated-field:focus {
+	outline: none;
+}
+
+.animated-label {
+	display: inline-block;
+	float: right;
+	padding: 0 0em;
+	width: 100%;
+	color: #808080;
+	font-weight: normal !important;
+	font-size: 18px;
+	-webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.animated-label-content {
+	position: relative;
+	display: block;
+	padding: 1.6em 0;
+	width: 100%;
+}
+
+.graphic {
+	position: absolute;
+	top: 0;
+	left: 0;
+	fill: none;
+}
+
+.icon {
+	color: #ddd;
+	font-size: 150%;
+}
+.input-logis {
+	margin: 4em 1em 1em;
+}
+
+.animated-field-logis {
+	padding: 0.4em 0.25em;
+	width: 100%;
+	background: transparent;
+	color: #AFB5BB;
+	font-size: 1.55em;
+}
+
+.animated-label-logis {
+	position: absolute;
+	width: 100%;
+	text-align: left;
+	pointer-events: none;
+}
+
+.animated-label-content-logis {
+	-webkit-transition: -webkit-transform 0.3s;
+	transition: transform 0.3s;
+}
+
+.animated-label-logis::before,
+.animated-label-logis::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	z-index: -1;
+	width: 100%;
+	height: 4px;
+	background: #6a7989;
+	-webkit-transition: -webkit-transform 0.3s;
+	transition: transform 0.3s;
+}
+
+.animated-label-logis::before {
+	top: 0;
+}
+
+.animated-label-logis::after {
+	bottom: 0;
+}
+
+.animated-field-logis:focus + .animated-label-logis .animated-label-content-logis,
+.animated-filled .animated-label-content-logis {
+	-webkit-transform: translate3d(0, -90%, 0);
+	transform: translate3d(0, -90%, 0);
+}
+
+.animated-field-logis:focus + .animated-label-logis::before,
+.animated-filled .animated-label-logis::before {
+	-webkit-transform: translate3d(0, -0.5em, 0);
+	transform: translate3d(0, -0.5em, 0);
+}
+
+.animated-field-logis:focus + .animated-label-logis::after,
+.animated-filled .animated-label-logis::after {
+	-webkit-transform: translate3d(0, 0.5em, 0);
+	transform: translate3d(0, 0.5em, 0);
+}
+
+/* logistiks */
+.input-logistiks {
+	overflow: hidden;
+}
+
+.animated-field-logistiks {
+	 /*   margin-top: 10px;
+    padding: 18px 0px;
+    width: 100%;
+    background: transparent;
+    color: #595F6E;
+    font-weight: normal;
+    font-size: 16px;*/
+	
+	margin-top: 10px;
+    padding: 16px 0px;
+    width: 100%;
+    background: transparent;
+    color: #2b2b2b;
+    font-weight: normal;
+    font-size: 18px;
+}
+
+
+
+.animated-label-logistiks {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	padding: 0 0px;
+	width: 100%;
+	height: calc(100% - 0em);
+	text-align: left;
+	pointer-events: none;
+}
+
+.animated-label-content-logistiks {
+	position: absolute;
+}
+
+.animated-label-logistiks::before,
+.animated-label-logistiks::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: calc(100% - 10px);
+	border-bottom: 1px solid #B9C1CA;
+}
+
+.animated-label-logistiks::after {
+	margin-top: 0px;
+	border-bottom: 2px solid red;
+	-webkit-transform: translate3d(-100%, 0, 0);
+	transform: translate3d(-100%, 0, 0);
+	-webkit-transition: -webkit-transform 0.3s;
+	transition: transform 0.3s;
+}
+
+.animated-label-logistiks-color-1::after {
+	border-color: hsl(216, 6%, 35%);
+}
+
+.animated-label-logistiks-color-2::after {
+	border-color: hsl(160, 100%, 50%);
+}
+
+.animated-label-logistiks-color-3::after {
+	border-color: hsl(20, 100%, 50%);
+}
+
+.animated-field-logistiks:focus + .animated-label-logistiks::after,
+.animated-filled .animated-label-logistiks::after {
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+}
+
+.animated-field-logistiks:focus + .animated-label-logistiks .animated-label-content-logistiks,
+.animated-filled .animated-label-content-logistiks {
+	-webkit-animation: anim-1 0.3s forwards;
+	animation: anim-1 0.3s forwards;
+	font-size:14px;
+}
+
+@-webkit-keyframes anim-1 {
+	50% {
+		opacity: 0;
+		-webkit-transform: translate3d(1em, 0, 0);
+		transform: translate3d(1em, 0, 0);
+	}
+	51% {
+		opacity: 0;
+		-webkit-transform: translate3d(-1em, -40%, 0);
+		transform: translate3d(-1em, -40%, 0);
+	}
+	100% {
+		opacity: 1;
+		-webkit-transform: translate3d(0, -40%, 0);
+		transform: translate3d(0, -40%, 0);
+	}
+}
+
+@keyframes anim-1 {
+	50% {
+		opacity: 0;
+		-webkit-transform: translate3d(1em, 0, 0);
+		transform: translate3d(1em, 0, 0);
+	}
+	51% {
+		opacity: 0;
+		-webkit-transform: translate3d(-1em, -40%, 0);
+		transform: translate3d(-1em, -40%, 0);
+	}
+	100% {
+		opacity: 1;
+		-webkit-transform: translate3d(0, -40%, 0);
+		transform: translate3d(0, -40%, 0);
+	}
+}
